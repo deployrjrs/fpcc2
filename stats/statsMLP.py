@@ -28,8 +28,8 @@ plt.ylabel('Frequência')
 plt.title('Histograma das Diferenças nas Acurácias')
 plt.show()
 
-# Realização do teste t pareado
-t_statistic, p_value = stats.ttest_rel(mnist_acuracias, fashion_mnist_acuracias)
+# Realização do teste t independente
+t_statistic, p_value = stats.ttest_ind(mnist_acuracias, fashion_mnist_acuracias)
 
 # Exibição dos resultados
 print("Diferenças entre as médias das acurácias:", diferencas)
